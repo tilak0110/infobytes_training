@@ -1,0 +1,9 @@
+Problem Statement
+Create a class Employee with fields id, name, department, and salary.
+Use a suitable collection to store multiple employees.
+Write methods to:
+Add employees.
+Retrieve employees of a specific department.
+Find the highest-paid employee in each department.
+Check for duplicate employee IDs.
+Display all employees sorted by salary.  Use suitable collection and stream in this !!
