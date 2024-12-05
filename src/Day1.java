@@ -1,17 +1,12 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day1 {
-}
+
 class EmployeeManager{
-    private List<Employee> employees;
+    private Set<Employee> employees;
 
     public EmployeeManager() {
-        this.employees = new ArrayList<>();
+        this.employees = new HashSet<>();
     }
 
     public boolean isDuplicateEmployee(int id){
@@ -27,15 +22,15 @@ class EmployeeManager{
         }
     }
 
-    public List<Employee> getEmployeeByDepartment(String departmentName){
+    public Set<Employee> getEmployeeByDepartment(String departmentName){
         return employees.stream()
                 .filter(e->e.getDepartment().equalsIgnoreCase(departmentName))
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
     }
-    public List<Employee> getEmployeesSortedBySalary(){
+    public Set<Employee> getEmployeesSortedBySalary(){
         return employees.stream()
                 .sorted(Comparator.comparingDouble(Employee::getSalary))
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
     }
 
 
